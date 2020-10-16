@@ -1,4 +1,19 @@
 <p>order-list works!</p>
+<p>Last Updated 10/14/2020</p>
 <div>3 tickets for Spider Man far from home. Tuesday July 2nd 2:30 PM</div>
-<div>5 tickets for Star Wars: The Rise Of Skywalker. December 21st 2019 10:00 AM. We were a little late thought it started at 10:30 AM.  Oops!</div>
-<ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+<div>5 tickets for Star Wars: The Rise Of Skywalker. December 21st 2019 10:00 AM. We were a little late, thought it started at 10:30 AM.  Oops!</div>
+
+<quill-editor
+
+[(ngModel)]="model.emailBody"
+name="emailBody"
+id="emailBody"
+[modules]="quillModules"
+[sanitize]="true"
+(onContentChanged)="updateRemainingChars(model.emailBody)"
+[styles]="{ height: '10em', width: '100%' }"
+[placeholder]="'Type in here!'"
+></quill-editor>
+
+<div [innerHTML]="model.emailBody"><div>
+
