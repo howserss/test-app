@@ -1,0 +1,28 @@
+/* Set dropdown font-families */
+
+[quill-editor-toolbar] .ql-font span[data-label="Calibri"]::before {
+    font-family: "Calibri";
+  }
+  
+
+  
+  /* Set content font-families */
+  
+  .ql-font-calibri {
+    font-family: "Calibri";
+  }
+  
+  @import 'quill/dist/quill.core.css';
+  @import 'quill/dist/quill.bubble.css';
+  @import 'quill/dist/quill.snow.css';
+  .quillEditor {
+      display: block;
+      width: 100%;
+      height: 100%;
+      .ql-container, .ql-toolbar {
+          border: none !important;
+        }
+  }
+  
+  
+  
